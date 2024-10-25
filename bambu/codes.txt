@@ -9,6 +9,16 @@
             "vendor": "BBL"
         }
     ],
+    "presets": {
+        "filament_colors": "#00AE42",
+        "filaments": [
+            "Generic PLA @BBL A1"
+        ],
+        "flush_volumes_matrix": "0.000000",
+        "flush_volumes_vector": "140.000000|140.000000",
+        "machine": "Bambu Lab A1 0.4 nozzle",
+        "process": "0.20mm Standard @BBL A1"
+    },
     "user_access_code": {
         "03919C443000082": "10193001",
         "03919C443000087": "23383175",
