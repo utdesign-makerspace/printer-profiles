@@ -1,3 +1,14 @@
+    "firstguide": {
+        "finish": true,
+        "privacyuse": false
+    },
+    "models": [
+        {
+            "model": "Bambu Lab A1",
+            "nozzle_diameter": "0.4",
+            "vendor": "BBL"
+        }
+    ],
     "user_access_code": {
         "03919C443000082": "10193001",
         "03919C443000087": "23383175",
