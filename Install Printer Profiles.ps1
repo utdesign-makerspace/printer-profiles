@@ -7,5 +7,5 @@ rm config.zip
 $ConfPath = "$($env:APPDATA)\BambuStudio\BambuStudio.conf"
 $CodePath = 'codes.txt'
 wget https://github.com/democat3457/PrusaProfiles/raw/refs/heads/main/bambu/codes.txt -OutFile $CodePath
-(Get-Content $ConfPath -Raw).replace("}`r`n}", "}$((Get-Content $CodePath -Raw))`r`n}") | Set-Content $ConfPath
+(Get-Content $ConfPath -Raw).replace("}`r`n}", "},`r`n$((Get-Content $CodePath -Raw))`r`n}") | Set-Content $ConfPath
 rm $CodePath
