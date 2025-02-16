@@ -15,10 +15,11 @@ Function pause ($message)
 }
 
 # Download and install PrusaSlicer printer profiles
+$ZipPath = "$($env:APPDATA)\PrusaSlicer\config.zip"
 Write-Output "Downloading and installing PrusaSlicer profiles..."
-wget https://github.com/democat3457/PrusaProfiles/raw/refs/heads/main/config.zip -OutFile config.zip
-Expand-Archive -Force config.zip -DestinationPath $env:APPDATA\PrusaSlicer\printer
-rm config.zip
+wget https://github.com/democat3457/PrusaProfiles/raw/refs/heads/main/config.zip -OutFile $ZipPath
+Expand-Archive -Force $ZipPath -DestinationPath $env:APPDATA\PrusaSlicer\printer
+rm $ZipPath
 Write-Output "PrusaSlicer profile installation complete!"
 
 # Check if Bambu Studio has started
@@ -33,7 +34,7 @@ if (!(Test-Path "$($env:APPDATA)\BambuStudio" -PathType Container)) {
 
 # Download and update Bambu Studio printer access codes
 $ConfPath = "$($env:APPDATA)\BambuStudio\BambuStudio.conf"
-$CodePath = 'codes.txt'
+$CodePath = "$($env:APPDATA)\BambuStudio\codes.txt"
 wget https://github.com/democat3457/PrusaProfiles/raw/refs/heads/main/bambu/codes.txt -OutFile $CodePath
 if (Test-Path $ConfPath -PathType Leaf) {
     (Get-Content $ConfPath -Raw).replace("}`r`n}", "},`r`n$((Get-Content $CodePath -Raw))`r`n}") | Set-Content $ConfPath
