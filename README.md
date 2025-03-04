@@ -1,6 +1,6 @@
-# UTDesign Makerspace PrusaSlicer Printer Presets
+# UTDesign Makerspace Printer Presets
 
-Presets for the UTDesign Makerspace's 3D Printer array for the PrusaSlicer software.
+Presets for the UTDesign Makerspace's 3D printer array. Includes presets for PrusaSlicer and Bambu Studio.
 
 ## Files
 
